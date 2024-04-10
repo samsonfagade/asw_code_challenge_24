@@ -1,0 +1,10 @@
+1. What changes you would make to this interfaces for use in an RTOS environment?
+- The read and write API can be optionally made a blocking with a timeout parameter and mutex.
+- Additionally I2C device can be asynchronous with a callback to notify the completion.
+- printf can be removed, a thread safe logging needs to be used.
+
+2. How might the I2C API be improved
+- Write and Read combined API can be Implemented.
+- Error codes can be extended : OK, Error, Busy etc.
+
+
