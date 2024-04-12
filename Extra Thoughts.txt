@@ -1,5 +1,6 @@
 1. What changes you would make to this interfaces for use in an RTOS environment?
-- The read and write API can be optionally made a blocking with a timeout parameter and mutex.
+- The read and write API needs to be gurded by a mutex, as to stop yielding even if higher priority thread tries to get the resource(blocking).
+-- Optionally it can be made a blocking API with a timeout parameter.
 - Additionally I2C device can be asynchronous with a callback to notify the completion.
 - printf can be removed, a thread safe logging needs to be used.
 
